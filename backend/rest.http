@@ -1,0 +1,131 @@
+###
+GET http://localhost:8001/api/getObjectId
+### USER ENDPOINTS
+GET http://localhost:8001/api/users/logout
+### 
+GET http://localhost:8001/api/users/getSelf
+###
+GET http://localhost:8001/api/users/getUsers
+###
+GET http://localhost:8001/api/chats/getChats
+###
+GET http://localhost:8001/api/chats/getChat/650e8126efad597cb38d90e7
+###
+# GET http://localhost:8001/api/chats/getChat/650e80b670d10e22af1da32f
+###
+POST http://localhost:8001/api/users/login
+Content-Type: application/json
+
+{
+    "email": "admin",
+    "password": "pass"
+}
+###
+POST http://localhost:8001/api/users/register
+Content-Type: application/json
+
+{
+    "email": "test@email.com",
+    "password": "pass"
+}
+###
+POST http://localhost:8001/api/users/updateUser
+Content-Type: application/json
+
+{
+  "email": "tdsdsest@email.com",
+  "password": "$2b$10$96sMAUqYEQgUF48mZVhYeeZVZ3RvsoBsTDQsWHPOrspZweS4IW/2a",
+  "role": "users",
+  "_id": "65016b345f3d3f015861b065",
+  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNjkzOTg2NTUwfQ.xgiVi95ubgqN9LsJ231usCMM4bl_035gqBNEtQ7zRp8",
+  "__v": 0
+}
+### JOBS ENDPOINTS
+GET http://localhost:8001/api/jobs/getJobs
+### SERVICES ENDPOINTS
+GET http://localhost:8001/api/services/search/paintss
+###
+GET http://localhost:8001/api/services/getServices
+
+###
+POST http://localhost:8001/api/services/updateService
+Content-Type: application/json
+
+{
+    "_id": "64f84c632cde56078d374138",
+    "name": "Mechanics",
+    "cost": "100",
+    "workers": "50",
+    "__v": 0
+}
+### REVIEWS ENDPOINTS
+GET http://localhost:8001/api/reviews/getReviews
+###
+POST http://localhost:8001/api/reviews/updateReview
+Content-Type: application/json
+
+{
+  "_id": "64f84b9f8a0579b16a74b1d1",
+  "jobId": "id1",
+  "senderId": "id1",
+  "text": "Template review 1 modified",
+  "__v": 0
+}
+###
+POST http://localhost:8001/api/reviews/createReview
+Content-Type: application/json
+
+{
+  "jobId": "id7",
+  "senderId": "id7",
+  "text": "Template review 7"
+}
+
+###
+POST http://localhost:8001/api/reviews/deleteReview
+Content-Type: application/json
+
+{
+    "_id": "64f84d33cddf8c1b70381b69"
+}
+
+###
+GET http://localhost:8001/api/comments/getComments
+###
+GET http://localhost:8001/api/comments/getComments/review
+###
+GET http://localhost:5173/api/comments/64f9d42793f2fc37c2af3107
+###
+POST http://localhost:8001/api/comments/replyComment/64f9dce6fc67a480e86f5ae8
+Content-Type: application/json
+
+  {
+    "_id": "64f9dce6fc67a480e86f5ae8",
+    "sourceJobId": {
+      "_id": "64f9dce4fc67a480e86f5ace",
+      "title": "Web Developer",
+      "description": "Web Developer Required",
+      "budget": "50000",
+      "location": "Mohakhali, Dhaka",
+      "employer": "Employer2",
+      "__v": 0
+    },
+    "senderId": {
+      "_id": "64f9dce4fc67a480e86f5ad0",
+      "email": "email2",
+      "password": "pass2",
+      "firstName": "first2",
+      "lastName": "last2",
+      "jwt": "jwt2",
+      "role": "worker",
+      "__v": 0
+    },
+    "commentType": "review",
+    "text": "template review",
+    "replies": [],
+    "__v": 0
+  }
+###
+https://api.getAddress.io/autocomplete/CH48BU?api-key=AT87F1ms5U-0Z7KPCWI86g25373&all=true&template={building_name},{line_1},{line_2},{town_or_city},{county},{country}
+###
+https://api.getAddress.io/get/MTg4ZmYxMTBkNGU4ZTQ1IDY1NTE2MCAwMjJhZTdkNTgxMmVlZWM=?api-key=AT87F1ms5U-0Z7KPCWI86g25373

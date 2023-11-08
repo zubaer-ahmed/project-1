@@ -1,0 +1,7 @@
+{
+  "restartable": "q",
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "exec": "node server.js",
+  "watch": ["**/*.js", "**/*.json"],
+  "ext": "js,json"
+}
